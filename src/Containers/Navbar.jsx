@@ -4,14 +4,16 @@ import { Link } from "react-router-dom";
 
 
 function Navbar() {
-    var i = 1
     function menshow(){
       var wrapper  = document.getElementById('wrapper')
       wrapper.style.display = "flex"
     }
     function hidemenu(){
-        var wrapper  = document.getElementById('wrapper')
-        wrapper.style.display = "none"
+        let width = window.innerWidth;
+        if(width <=600){
+            var wrapper  = document.getElementById('wrapper')
+            wrapper.style.display = "none"
+        }
     }
   return (
     <div className='nav'>

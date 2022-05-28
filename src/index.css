@@ -716,3 +716,12 @@ html{
 .ficon{
   display: none;
 }
+#searchitems{
+  display: none;
+}
+.jfff{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

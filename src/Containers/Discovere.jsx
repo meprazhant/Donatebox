@@ -9,11 +9,10 @@ import { BsFillDashCircleFill } from "react-icons/bs";
 import { MdClearAll } from "react-icons/md";
 import { BsFilterCircle } from "react-icons/bs";
 import data from "./Dataproj";
-
 import ProjectCard from "./ProjectCard";
-import { render } from "@testing-library/react";
 
 function Discovere() {
+  
     var [dettt,setdet] =useState("All")
     var [searchText,setSearchtext] = useState("")
     var mapList = ""
@@ -39,24 +38,14 @@ function Discovere() {
     var search = document.getElementById("search");
     search.value = "";
   }
-
-  // const [postData, setpostData] = useState({})
-  var postData = data;
-  var datalen;
-
-  function GETDATATA() {
-    // setpostData(data)
-  }
-
-  // const filtereddata = data.filter(function(value){
-  //     return value.tag = "charity"
-  // })
-  // console.log(filtereddata)
   var [filterText, setfiltertext] = useState("");
   var [filterlen, setfilterlen] = useState("");
   function filterItem(e) {
     setdet(e)
-    toggleFilter();
+    let width = window.innerWidth;
+    if(width <=600){
+      toggleFilter();
+  }
     // setfilterlen(mapList.length)
     setfiltertext(e);
     // datalen = (data.length)
@@ -123,7 +112,6 @@ var numm = 1
             filter.style.display = 'none'
         }
     }
-  useEffect(() => GETDATATA());
   return (
     <div className="discover">
       <div className="disImage">
@@ -182,7 +170,7 @@ var numm = 1
           Found <span>{filterlen}</span> Active projects
         </p>
       </div>
-      <div className="pcitems" id="pcitems">
+      <div className="pcitems" id="pcitems"  >
         {mapList}
       </div>
       <div className="pcitems" id="searchitems">
