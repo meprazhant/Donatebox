@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Donatebox/static/css/main.5331ad1f.css",
+    "main.js": "/Donatebox/static/js/main.ca1777b9.js",
+    "static/media/homeBG.png": "/Donatebox/static/media/homeBG.75da66d0f622240e9d9a.png",
+    "index.html": "/Donatebox/index.html",
+    "main.5331ad1f.css.map": "/Donatebox/static/css/main.5331ad1f.css.map",
+    "main.ca1777b9.js.map": "/Donatebox/static/js/main.ca1777b9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5331ad1f.css",
+    "static/js/main.ca1777b9.js"
+  ]
+}
