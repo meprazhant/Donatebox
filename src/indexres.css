@@ -1,0 +1,174 @@
+@media only screen and (max-width:600px){
+    .wrapper{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        width: 80%;
+        background-color: #11111d;
+        color: white;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        position: fixed;
+        justify-content: start;
+        align-items: flex-start;
+        padding-left: 20px;
+        gap: 40px;
+        padding-top: 50px;
+        z-index: 99;
+        transition: ease-in-out .5s;
+        animation: menuAnim .2s;
+    }
+    @keyframes menuAnim {
+        0%{width: 0;}
+        100%{width: 80%;}
+        
+    }
+
+    .menus, .logarea{
+        flex-direction: column;
+        font-size: 20px;
+        font-weight: 400;
+        width: 80%;
+    }
+    .menmen{
+        display: block;
+    }
+    .menus a{
+        font-weight: 400;
+    }
+    .nav{
+        justify-content: start;
+        gap: 30px;
+    }
+    .logo p{
+        font-size: 20px;
+    }
+    .logox{
+        display: none;
+    }
+    .logox img{
+        height: 50px;
+    }
+    .logarea a:last-child{
+        border: 0;
+        padding: 0;
+    }
+    .logarea{
+        border-top: 2px solid rgb(97, 97, 97);
+        width: 80%;
+        padding-top: 20px;
+    }
+    .cross{
+        display: block;
+        background-color: rgb(183, 47, 47);  
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        position: absolute;
+        top: 3px;
+        right: 2px;
+    }
+    .active{
+        background-color: white;
+        color: black;
+        padding: 8px;
+        margin-left: -10px;
+        border-radius: 10px;
+    }
+    .menmen{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /* main */
+    .contentImg h2{
+        font-size: 30px;
+    }
+    .contentImg a{
+      transition: 1s;
+    }
+    body::-webkit-scrollbar{
+        display: none;
+    }
+    .atscontent{
+        flex-direction: column;
+    }
+    .atsCard{
+        width: 90%;
+    }
+    .ats{
+        height: auto;
+    }
+    .top h2{
+        font-size: 35px;
+    }
+    .loginArea{
+        height: 100%;
+        width: 100%;
+    }
+    .topLogo{
+        display: none;
+    }
+    .logDetails{
+        height: 78vh;
+
+    }
+    .filters{
+        display: none;
+        width: 100%;
+        height: 100%;
+        gap: 20px;
+        padding-bottom: 10px;
+        flex-direction: column;
+        animation: fanima .2s ease-in-out;
+    }
+    @keyframes fanima {
+        0%{filter: blur(10px);}
+        100%{filter: blur(0);}
+        
+    }
+    .filters p{
+        display: none;
+    }
+    
+    .searchMenu{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-around;
+    }
+    .ficon{
+        display: flex;
+    }
+    .fsbar{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        padding: 10px 0;
+    }
+    .filters a{
+        transition: ease-in-out 2s;
+    }
+    .projectcard{
+        display: flex;
+        height: auto;
+        width: 95%;
+        flex-direction: column;
+    }
+    .imagesec,.contentsec{
+        width: 100%;
+    }
+    .imagesec img{
+        width: 100%;
+    }
+    .imagesec{
+        height: 50%;
+    }
+    .shortdesc{
+        width: 90%;
+    }
+    .conwrapper{
+        padding: 10px;
+    }
+} 

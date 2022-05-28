@@ -1,0 +1,718 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Navbar */
+
+.nav{
+  padding: 10px;
+  background-color: #11111d;
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo img{
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+}
+.logo a{
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.logo p{
+  font-size: 25px;
+  margin: 0;
+  font-weight: 400;
+}
+.logo p:hover{
+  color: tomato;
+}
+.logo img:hover{
+  border: 2px solid greenyellow;
+
+}
+.menus{
+  display: flex;
+  gap: 20px;
+}
+.menus a{
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+}
+.menus a:hover{
+  color:rgb(173, 45, 22);
+  transition: ease-in-out .2s;
+}
+.logarea{
+  display: flex;
+  gap: 20px;
+}
+.logarea a:last-child{
+  border-left: 2px solid rgba(0, 0, 0, 0.588);
+  padding-left: 10px;
+}
+.logarea a:hover{
+  color: red;
+  cursor: pointer;
+}
+.logarea a,.menus a{
+  text-decoration: none;
+  color: white;
+}
+.active{
+  color :green;
+}
+.menmen{
+  display: none;
+}
+.wrapper{
+  display: flex;
+  width: 60%;
+  align-items: center;
+  justify-content: space-between;
+}
+.cross{
+  display: none;
+}
+.logox{
+  display: none;
+}
+
+/* Home */
+.contentImg{
+  height: 92vh;
+  background-color: #000;
+  background-image: url('./Images/homeBG.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.contentImg h2{
+  color: orangered;
+  font-size: 50px;
+  margin: 0;
+}
+.contentImg a{
+  padding: 10px;
+  /* background-color: rgb(60, 191, 191); */
+  color:rgb(60, 191, 191);
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  align-items: center;
+  margin: 0;
+  gap: 20px;
+  border: 2px solid rgb(60, 191, 191);
+  transition: 0.25s;
+}
+:root{
+  --hover: rgb(60, 191, 191);
+}
+.contentImg a:hover{
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  box-shadow: inset 0 -3.25em 0 0 var(--hover);
+  border: 2px solid rgb(60, 191, 191);
+  cursor: pointer; 
+}
+
+/* Animates */
+
+
+.mouse {
+  width: 30px;
+  height: 50px;
+  border: 3px solid rgba(255, 255, 255, 0.653);
+  border-radius: 60px;
+  position: absolute;
+  bottom: 50px;
+}
+.mouse::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.468);
+  border-radius: 50%;
+  opacity: 1;
+  animation: wheel 2s infinite;
+  -webkit-animation: wheel 2s infinite;
+}
+html{
+  scroll-behavior: smooth;
+}
+@keyframes wheel {
+  to {
+    opacity: 0;
+    top: 40px;
+  }
+}
+@-webkit-keyframes wheel {
+  to {
+    opacity: 0;
+    top: 60px;
+  }
+}
+/* About The Site */
+.ats{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  padding-bottom: 30px;
+  background-color: rgb(255, 255, 255);
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+.top{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 30px;
+  margin: 0;
+}
+.top h2{
+  margin: 0;
+  margin-top: 10px;
+}
+.tbs{
+  width: 200px;
+  /* height: 3px; */
+  border-radius: 20%;
+  border: 2px solid red;
+  background-color: transparent;
+}
+.atscontent{
+  /* background-color: #a4a4a4; */
+  /* height: 60vh; */
+  width: 100%;
+  display: flex;
+  /* padding: 20px; */
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.atsCard{
+  width: 30%;
+  background-color: rgb(247, 247, 247);
+  overflow: hidden;
+  height: 100%;
+}
+.bgimg img{
+  border-radius: 20px;
+  /* height: 95%; */
+  object-fit: cover;
+  height: 250px;
+  max-width: 95%;
+  object-position: center;
+}
+.bgimg{
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.atsCard p{
+  padding: 10px;
+}
+.atsCard:hover{
+  background-color: #11111d;
+  transition: ease-in-out .2s;
+  color: rgb(234, 234, 234);
+  cursor: pointer;
+}
+.atsCard:hover >h2{
+  color: rgb(162, 12, 12);
+}
+.atsCard h2{
+  text-align: center;
+  margin: 0;
+  color: maroon;
+  font-family: 'Inter', sans-serif;
+  font-size: 25px;
+}
+.tbs2{
+  width: 120px;
+}
+
+/* teams */
+
+.teamsCard{
+  /* height: 40%; */
+  height: 450px;
+  width: 300px;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+.teamsCard:hover > a{
+  color: white;
+}
+.teamsCard:hover > .imgsec img{
+  filter: grayscale(0%);
+  transform: scale(1.1);
+  transition: ease-in .2s;
+}
+.imgsec{
+  height: 60%;
+  background-color: #000;
+  overflow: hidden;
+}
+.imgsec img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: grayscale(100%);
+
+}
+.socials a{
+  text-decoration: none;
+  font-size: 30px;
+  color: rgb(8, 84, 159);
+}
+.socials a:hover{
+  color: red;
+}
+.socials{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.parea{
+  max-height: 29%;
+  min-height: 29%;
+  overflow: hidden;
+}
+.atscontent{
+  flex-wrap: wrap;
+}
+.Logarea{
+  height: 92vh;
+  background-color: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loginArea{
+  background-color: #fff;
+  min-height: 60%;
+  width: 300px;
+  transition: ease-in .2s;
+  /* height: 60vh; */
+  border-radius: 10px;
+}
+.topLogo{
+  background-color: #0062ff;
+  height: 20%;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+
+}
+.topLogo img{
+  height: 40px;
+}
+.sinsup{
+  height: 6vh;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.494);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.sin, .sup{
+  height: 100%;
+  width: 50%;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  /* border-top: 2px solid transparent; */
+}
+.sin:hover,
+.sup:hover{
+  background-color: rgb(159, 159, 159);
+  color: white;
+  transition: ease-in .2s;
+}
+
+
+.act{
+  border-bottom: 3px solid #0062ff;
+  color: #0062ff;
+}
+
+.logDetails{
+  height: 28vh;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  animation: loganim ease-in-out .5s;
+
+}
+.logDetails input{
+  padding: 10px;
+  border: 0;
+  width: 90%;
+}
+.logDetails input:focus{
+  margin: 0;
+  border: 0;
+  outline: 0;
+  background-color: rgb(252, 252, 252);
+}
+.email,.password{
+  width: 90%; 
+  display: flex;
+  justify-content: center;
+  padding: 2px;
+  align-items: center;
+  background-color: rgb(227, 227, 227);
+}
+.email svg,
+.password svg{
+  padding: 10px;
+}
+
+.email input:focus > .email{
+  border: 2px solid rgb(255, 0, 0);
+}
+.for a{
+  text-decoration: none;
+  color: rgb(121, 121, 121);
+  cursor: pointer;
+}
+.proceed{
+  background-color: #0062ff;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.proxx svg{
+  color: white;
+  font-size: 20px;
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 10px;
+}
+.proxx svg:hover{
+  padding: 12px;
+  font-size: 22px;
+  cursor: pointer;
+  transition: ease-in-out .2s;
+}
+.btmm{
+  border: 1px solid red;
+  width: 150px;
+  position: absolute;
+  display: none;
+  bottom: -5px;
+
+}
+.for:hover > a {
+  color: red;
+  transition: ease-in-out .2s;
+
+}
+.for:hover > .btmm{
+  display: block;
+  animation: fpanim .2s;
+}
+.for{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes fpanim {
+  0% {width: 0; }
+  100%{width: 150px;right: 0;}
+}
+.logwrap{
+  display: block;
+  height: 38vh;
+  /* animation: loganim ease-in-out .5s; */
+}
+@keyframes loganim {
+  0%{
+    /* height: 0; */
+    
+  opacity: 0;
+  filter: blur(3px);
+
+  }
+  100%{
+  filter: blur(0px);
+  opacity: 1;
+  /* height: auto; */
+  }
+  
+}
+.signwrap{
+  display: none;
+  /* animation: loganim .5s; */
+
+
+}
+.tac{
+  font-size: 12px;
+  padding: 0px 17px;
+  text-align: center;
+  color: #7f7f7f;
+}
+.sigdet{
+  height: 50vh;
+  display: flex;
+  gap: 18px;
+}
+.sigdet input{
+  border: 1px solid rgb(76, 76, 76);
+}
+.sigupe{
+  background-color: #fff;
+  padding: 0;
+}
+
+
+/* Discover */
+
+.discover{
+  min-height:90vh ;
+  background-color: rgb(224, 224, 224);
+}
+.disImage{
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('https://global.unitednations.entermediadb.net/assets/mediadb/services/module/asset/downloads/preset/Libraries/Production+Library/17-03-2022_World-Bank_Nepal.jpg/image1170x530cropped.jpg') rgba(0, 0, 0, 0.672);
+  background-blend-mode: multiply;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap');
+.disImage h2{
+  color: white;
+  font-size: 50px;
+  font-family: 'Noto Sans', sans-serif;
+}
+.disImage h2:hover{
+  color: orangered;
+  cursor: pointer;
+  transition: ease-in-out .2s;
+}
+.searchMenu{
+  height: 8vh;
+  background-color: #fff; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.searchMenu input{
+  border: 0;
+}
+.searchBar{
+  position: relative;
+  padding: 5px 12px;
+  display: flex;
+  padding: 5px;
+  /* gap: 10px; */
+  border: 1px solid black;
+  justify-content: center;
+  align-items: center;
+}
+.searchMenu input:focus{
+  outline: 0;
+}
+
+#clear{
+  position: absolute;
+  right: 0;
+  height: 100%;
+  cursor: pointer;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300&display=swap');
+.filters{
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 0 30px;
+  font-family: 'Roboto Flex', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+.filters a{
+  border: 1px solid transparent;
+  height: 80%;
+  padding: 0 10px;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.filters a svg{
+  color: #7f7f7f;
+}
+.filters a:hover{
+  cursor: pointer;
+  /* border: 1px solid black; */
+  color: red;
+  transition: ease-in-out .2s;
+
+}
+
+/* Project Card */
+.pcitems{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  min-height: 30vh;
+  padding: 40px 0;
+}
+.projectcard{
+  height: 37vh;
+  background-color: #fff;
+  width: 70%;
+  display: flex;
+  border: 1px solid rgb(148, 148, 148);
+}
+.imagesec{
+  width: 40%;
+  height: 100%;
+}
+.contentsec{
+  width: 60%;
+  height: 100%;
+  overflow: hidden;
+
+}
+.imagesec img{
+  height: 100%;
+  width: 95%;
+  object-fit: cover;
+  object-position: center;
+}
+.tags{
+  display: flex;
+  gap: 20px;
+  padding: 10px 0px;
+}
+.tags a{
+  padding: 3px 10px;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  background-color: #7D88CD;
+  border-radius: 20px;
+  cursor: pointer;
+  border: 1px solid #7D88CD;
+  text-decoration: none;
+}
+.tags a:hover{
+  transition: ease-in-out .2s;
+  color: #7D88CD;
+  background-color: transparent;
+}
+.title{
+  font-size: 22px;
+  font-weight: 400;
+}
+.title:hover{
+  color: red;
+  cursor: pointer;
+}
+.byUser span{
+  color: #7f7f7f;
+}
+.byUser span:hover{
+  color: red;
+  cursor: pointer;
+}
+.byUser p{
+  margin: 0;
+  font-weight: 600;
+}
+.shortdesc{
+  text-overflow: ellipsis;
+}
+.shortdesc{
+  padding-top: 20px;
+  max-height: 25%;
+  overflow: hidden;
+  color: #474747;
+}
+.projdets{
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+}
+.projdets span{
+  color: rgb(45, 45, 45);
+  font-weight: 800;
+}
+.projdets p{
+  margin: 0;
+}
+.projdets h2{
+  color: rgb(52, 52, 52);
+  font-size: 40px;
+}
+.time{
+  padding: 10px 0;
+}
+.imagesec img{
+  filter: brightness(90%);
+}
+.imagesec img:hover{
+  filter: brightness(100%);
+  cursor: pointer;
+
+}
+.ficon{
+  display: none;
+}
